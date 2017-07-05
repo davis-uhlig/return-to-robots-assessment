@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <nav>
+      <span class="nav-items"><a href="/">Home</a></span>
+      <span class="nav-items"><a href="/unemployedRobots">Robots Looking For Work</a></span>
+      <span class="nav-items"><a href="/employedRobots">Employed Robots</a></span>
+    </nav>
+    <div class="allUsers">
+      {{#unemployed}}
+      <div class="user">
+        <img src="{{avatar}}" alt="">
+        <a  href="#{{name}}"><p>{{name}}</p></a>
+        {{#job}}
+        <p>{{job}}, {{company}}</p>
+        {{/job}}
+        {{^job}}
+        <p id="unemployed">Available for hire</p>
+        {{/job}}
+
+      </div>
+      {{/unemployed}}
+    {{#unemployed}}
+    </div>
+    <div id="{{name}}" class="detailedUser">
+        <img id="userImage" src="{{avatar}}" alt="">
+        <div class="flexInfo">
+          <h1 id="name">{{name}}</h1>
+          {{#address}}
+          <p>{{#city}}{{city}},{{/city}} {{^city}}{{/city}} {{country}} | {{#job}} {{job}}, {{company}} {{/job}} {{^job}}Available for hire{{/job}}</p>
+          <p>{{email}} | {{phone}}</p>
+          {{/address}}
+
+        </div>
+    </div>
+        <table>
+          <tr>
+            {{#university}}
+            <td><b>Education</b></td>
+
+            <td>{{university}}</td>
+            {{/university}}
+            {{^university}}
+            <td></td>
+            {{/university}}
+          </tr>
+          <tr>
+            <td><b>Skills</b></td>
+            <td>{{skills}}</td>
+          </tr>
+
+        </table>
+
+
+    {{/unemployed}}
+
+  </body>
+</html>

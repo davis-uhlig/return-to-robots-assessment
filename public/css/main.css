@@ -1,0 +1,39 @@
+.allUsers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user {
+  /*width: 20%;*/
+  flex-basis: 20%;
+  margin: 5px;
+  border: 1px solid black;
+  padding: 1%;
+}
+
+.detailedUser {
+  display: flex;
+}
+
+table {
+  margin-bottom: 20px;
+  margin-left: 75px;
+  margin-top: 10px;
+}
+
+#userImage {
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.flexInfo {
+  margin-left: 50px;
+}
+
+#unemployed {
+  color: red;
+}
+
+.nav-items {
+  margin-right: 3%;
+}
